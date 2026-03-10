@@ -1,0 +1,61 @@
+
+@use "./variables" as *;
+@use "./mixins" as *;
+body {
+  background: $bg;
+  color: $text;
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+.container {
+  padding: 16px;
+
+  @include tablet {
+    padding: 32px;
+  }
+}
+
+.editor-section {
+  background: $card;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+button {
+  background: $primary;
+  border: none;
+  padding: 10px 16px;
+  color: white;
+  border-radius: 6px;
+  margin-right: 10px;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.results-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+
+  th, td {
+    border: 1px solid $border;
+    padding: 8px;
+    text-align: left;
+  }
+
+  th {
+    background: $card;
+  }
+}
+
+.hint-box {
+  margin-top: 20px;
+  background: $card;
+  padding: 12px;
+  border-left: 4px solid $primary;
+}
